@@ -1,10 +1,11 @@
 import pager
 
 def main():
-    refs = map(int, input().split())
+    refStr = input() 
     frames = int(input())
-    #print("Page Referene String:\n",' '.join(map(str,refs)))
-    #print("Number of Frames: ", str(frames))
+    print("Page Referene String:\n", refStr)
+    print("Number of Frames: ", str(frames))
+    refs = list(map(int, refStr.split()))
     while(True):
         alg = input()
         fun = pager.getPageAlg(alg)
