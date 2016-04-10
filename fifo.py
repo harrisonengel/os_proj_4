@@ -1,5 +1,5 @@
 
-def fifo(refs, frames):
+def alg(refs, frames):
     faults = 0
     q = []
     for i in refs:
