@@ -7,8 +7,12 @@ def main():
     print("Number of Frames: ", str(frames))
     refs = list(map(int, refStr.split()))
     while(True):
-        alg = input()
-        fun = pager.getPageAlg(alg)
-        faults = fun(refs, frames)
-        print(alg, ": ", str(faults))
+        try:
+           alg = input()
+           fun = pager.getPageAlg(alg)
+           faults = fun(refs, frames)
+           print(alg, ": ", str(faults))
+        except EOFError:
+            break
+    
 main()
