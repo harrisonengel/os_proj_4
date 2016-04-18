@@ -23,14 +23,14 @@ def alg(refs, frames):
     freq = dict(zip(refs, [0]*len(refs)))
     q = []
     faults = 0
-    for i in refs:
+    for i in refs: 
         freq[i] = freq[i] + 1
         if i not in q:
             faults += 1
-            if len(q) >= frames:
-                least = sys.maxsize
+            if len(q) >= frames: 
+                least = sys.maxsize 
                 minElt = 0
-                for j in q:
+                for j in q: #loops through elements in the q and finds the one with the lowest freqeuncy count
                     if least > freq[j]:
                         least = freq[j]
                         minElt = q.index(j)

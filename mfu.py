@@ -17,7 +17,7 @@ def alg(refs, frames):
             if len(q) >= frames:
                 most = 0
                 maxElt = 0
-                for j in q:
+                for j in q: #loop through q to find elt with the maximum frequency count
                     if most < freq[j]:
                         most = freq[j]
                         maxElt = q.index(j)
