@@ -1,4 +1,18 @@
-
+################################
+#
+#   Least Recently Used algorithm
+#
+# Parameters
+# ----------
+# refs - A list of page references
+# frames - The max number of frames to model
+#
+# Local Variables
+# ---------------
+# faults - Counts the number of faults
+# q - Keeps track of frames in memory
+#
+################################
 def alg(refs, frames):
     q = []
     faults = 0
