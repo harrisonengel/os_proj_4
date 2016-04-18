@@ -2,6 +2,7 @@
 import pager
 
 def main():
+
     try:
         refStr = input() 
         frames = int(input())
@@ -15,5 +16,5 @@ def main():
             print(alg, ": ", str(faults))
     except EOFError:
         print()
-        
+
 main()

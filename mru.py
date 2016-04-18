@@ -1,4 +1,14 @@
 
 def alg(refs, frames):
-    print("MRU: Not Yet Implemented")
-    return 0
+    q = []
+    faults = 0
+    for i in refs:
+        if i in q:
+            q.pop(q.index(i))
+            q.insert(0,i)
+        else:
+            faults += 1
+            if len(q) >= frames:
+                q.pop(0)
+            q.insert(0,i)
+    return faults
